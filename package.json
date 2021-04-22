@@ -2,17 +2,16 @@
   "name": "@milo/root",
   "private": true,
   "version": "1.0.0",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
+  
   "scripts": {
-    "mobile": "yarn workspace @milo/mobile",
-    "web": "yarn workspace @milo/web"
+    "mobile": "yarn workspace @milo/mobile expo start",
+    "web": "yarn workspace @milo/web expo start --web",
+    "postinstall": "expo-yarn-workspaces check-workspace-dependencies"
   },
-  "dependencies": {},
   "devDependencies": {
-    "expo-cli": "^4.4.2"
+    "expo-yarn-workspaces": "^1.5.0"
   }
 }

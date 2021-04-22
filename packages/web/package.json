@@ -2,9 +2,11 @@
   "name": "@milo/web",
   "private": true,
   "version": "1.0.0",
+  "main": "__generated__/AppEntry.js",
   "scripts": {
     "dev": "expo start --web",
-    "build": "next build"
+    "build": "next build",
+    "postinstall": "expo-yarn-workspaces postinstall"
   },
   "dependencies": {
     "expo": "~40.0.0",
